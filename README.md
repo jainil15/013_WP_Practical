@@ -276,7 +276,7 @@ formtarget|	_blank<br> _self<br> _parent<br>_top <br>framename|	Specifies a targ
 name	|text|	Assign a name to an input control.
 align|	left<br> right<br> top<br> middle<br> bottom|	Specifies the alignment of an image input (for type="image").
 form	|form-id|	Specifies the `<form>` element that the input element is associated with (its form owner).
-required	required	This Boolean attribute specifies that the user must fill in a value before submitting the form.
+required	|required	|This Boolean attribute specifies that the user must fill in a value before submitting the form.
  
 22. `<textarea>`
 
@@ -323,9 +323,8 @@ The `<option>` element represents an option in a dropdown list defined by the `<
 |:-:|:-:|:-:|
 label	|text|	Specifies a short label for an option.
 disabled	|disabled|	This Boolean attribute indicates that the enclosed option is disabled i.e. the option is not selectable.
-selected	|selected|	This Boolean attribute indicates that the option is initially
-selected.
-value	|option-value Defines a value for an option. If it is not defined, the value of an `<option>` element is the text content of the element.
+selected	|selected|	This Boolean attribute indicates that the option is initially selected.
+value	|option-value|Defines a value for an option. If it is not defined, the value of an `<option>` element is the text content of the element.
 
 25. `<marquee>`
 
