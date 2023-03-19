@@ -145,8 +145,7 @@ HTML Ordered List or Numbered List displays elements in numbered format. We can 
 |Attribute|Value|Description|
 |:-:|:-:|:-:|
 type|1,A,a,l,i|Specify the bullet or numbering type for the list item.
-start|number|Specifies the starting number of the first item
-in an ordered list.
+start|number|Specifies the starting number of the first item in an ordered list.
 reversed|reversed|reversed	reversed	This Boolean attribute specifies that the items of the list are specified in the reverse order.
 
 13. `<li>`
