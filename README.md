@@ -305,11 +305,9 @@ The `<select>` element is used to create a drop-down list. The `<select>` elemen
 |:-:|:-:|:-:|
 multiple|	multiple|	This Boolean attribute indicates that multiple options can be selected in the list.
 name|	unique-name|	Defines the name for the select element.
-required	|required|	This Boolean attribute indicates that an option with
-a non-empty value must be selected before form submission.
+required	|required|	This Boolean attribute indicates that an option with a non-empty value must be selected before form submission.
 size	|number|	Specifies the number of options to show to the user.
-disabled|	disabled|	This Boolean attribute indicates that drop-down list
-is disabled i.e. the drop-down list is not selectable.
+disabled|	disabled|	This Boolean attribute indicates that drop-down list is disabled i.e. the drop-down list is not selectable.
 form	|form-id	|Specifies the form that the select element is associated with i.e. its "form owner".
  
 24. `<option>`
