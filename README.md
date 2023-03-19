@@ -1,6 +1,54 @@
-<h2 align="center">Practical 2</h2>
+<style>
 
-a) Demonstrate following tags in HTML. Create a simple html file to demonstrate the use of different tags listed below
+    
+    *{
+        
+        font-size:14px;
+    }
+    html body code{
+        font-family: jetbrains mono !important;freesans,sans-serif;
+        font-size: 14px !important;
+        background: inherit !important
+    }
+
+    code {
+    white-space : pre-wrap !important;
+    word-break: break-word;
+  }
+
+    html body pre code, html body pre tt {
+         display: flex;  
+  flex-wrap: wrap;
+        font-family: font: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif !important;
+        font-size: 14px !important;
+        background: inherit !important
+    }
+
+    body{
+        color: #000 !important
+    }
+
+    li>code:first-child{
+        font-size: 14px !important;
+        font-weight: bolder;
+    }
+    
+    html body code{
+        
+        font-size: 14px !important;
+    }
+
+    #firstline{
+        font-size: 16px;
+        font-weight: bolder;
+        color: #000;
+    }
+
+    
+</style>
+<h2 id ="header_" align="center">Practical 2</h2>
+<span id="firstline">a. Demonstrate following tags in HTML. Create a simple html file to demonstrate the use of different tags listed below</span>
+<br><br>
 
 1. `<!--...-->`
 - **Description:**
@@ -145,7 +193,8 @@ HTML Ordered List or Numbered List displays elements in numbered format. We can 
 |Attribute|Value|Description|
 |:-:|:-:|:-:|
 type|1,A,a,l,i|Specify the bullet or numbering type for the list item.
-start|number|Specifies the starting number of the first item in an ordered list.
+start|number|Specifies the starting number of the first item
+in an ordered list.
 reversed|reversed|reversed	reversed	This Boolean attribute specifies that the items of the list are specified in the reverse order.
 
 13. `<li>`
@@ -198,6 +247,7 @@ width	|length|	Sets the width of a table cell.
 - **Description:**
 The `<tr>` (short for table row) element defines a row of cells in a table.
 The `<tr>` element acts as a container for table cells and contains one or more `<th>` or `<td>` elements.
+
 - **Attributes:**
 
 |Attribute|Value|Description|
@@ -304,9 +354,11 @@ The `<select>` element is used to create a drop-down list. The `<select>` elemen
 |:-:|:-:|:-:|
 multiple|	multiple|	This Boolean attribute indicates that multiple options can be selected in the list.
 name|	unique-name|	Defines the name for the select element.
-required	|required|	This Boolean attribute indicates that an option with a non-empty value must be selected before form submission.
+required	|required|	This Boolean attribute indicates that an option with
+a non-empty value must be selected before form submission.
 size	|number|	Specifies the number of options to show to the user.
-disabled|	disabled|	This Boolean attribute indicates that drop-down list is disabled i.e. the drop-down list is not selectable.
+disabled|	disabled|	This Boolean attribute indicates that drop-down list
+is disabled i.e. the drop-down list is not selectable.
 form	|form-id	|Specifies the form that the select element is associated with i.e. its "form owner".
  
 24. `<option>`
@@ -342,4 +394,610 @@ vspace	|pixels|	Specifies vertical space around the marquee.
 loop	|number	|Specifies how many times to loop. The default value is INFINITE, which means that the marquee loops endlessly.
 bgcolor	|Color Name|	Define the background color of the marquee.
 
+<br><br>
 
+**CODE:**
+```
+<!-- this is a comment -->
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Welcome to the Page</h1>
+        <br>
+        <a href="www.google.com">Google</a>
+        <br><br>
+        <address class="">
+            444 RoundBurrow<br>
+            near Saint rows park<br>
+            Somecountry
+        </address>
+        <br>
+        <b>This is a bold tag</b>
+        <br>
+        <i>This is an italics tag</i>
+        <h1>This is h1</h1>
+        <h2>This is h2</h2>
+        <h3>This is h3</h3>
+        <h4>This is h4</h4>
+        <h5>This is h5</h5>
+        <h6>This is h6</h6>
+        <hr>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <pre>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</pre>
+        <img src="https://picsum.photos/536/354" alt="https://picsum.photos/200/300">
+        <ol>
+         <li>Coffee</li>
+         <li>Tea</li>
+         <li>Milk</li>
+        </ol>
+        <ul>
+         <li>Coffee</li>
+         <li>Tea</li>
+         <li>Milk</li>
+        </ul>
+```
+```
+        <table border="1">
+            <caption>hello</caption>
+            <th>col1</th>
+            <th>col2</th>
+            <th>col3</th>
+            <th>col4</th>
+            <tr>
+
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <iframe src="https://picsum.photos/200/300" width="300" height="200"></iframe>
+        <br><br><br>
+        <form action="index.html" method="post">
+            <input type="text" name="Name" value="Enter name">
+        </form>
+
+
+
+    </body>
+</html> 
+```
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+**Output:**<br>
+![alltag](/assets/alltag.png)
+
+<br><br><br><br><br><br>
+**2.Frame**
+
+**CODE:**
+
+```
+<!DOCTYPE html>
+<html>    
+    <head>
+        <title>frameset attribute</title>
+        <style>
+            frameset{
+                vertical-align: top;
+            }
+        </style>
+    </head>
+         
+    <frameset cols = "20%, 30%, 30%, 20%">
+         <frameset rows="100 , 200, 130">
+            <frame/>
+            <frame />
+            <frame />
+         </frameset>
+         <frameset rows="170 , 130">
+            <frame />
+            <frame />
+         </frameset>
+         <frameset rows="130 , 170">
+            <frame />
+            <frame />
+         </frameset>
+         <frameset rows="100, 150 , 60">
+            <frame />
+            <frame />
+            <frame />
+         </frameset>
+    </frameset>
+</html>
+```
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+**Output:**
+![framesfor1](/assets/framesfor1.png)
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<span id="firstline">b. Demonstrate use of DIV and SPAN tag.</span>
+
+- `<div>`
+The `<div>` tag defines a division or a section in an HTML document. The `<div>` tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript. The `<div>` tag is easily styled by using the class or id attribute. Any sort of content can be put inside the `<div>` tag!
+<br>
+- `<span>`
+The `<span>` tag is an inline container used to mark up a part of a text, or a part of a document. The `<span>` tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute. The `<span>` tag is much like the `<div>` element, but `<div> `is a block- level element and `<span>` is an inline element.
+
+**CODE:**
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>My mother has <span style="color:blue">blue</span> eyes.</p> 
+    <div style="border:1px solid pink;padding:20px;font-size:20px">  
+        <p>This is the first paragraph</p>  
+        <p>This is second paragraph</p>  
+        </div> 
+</body>
+</html>
+```
+<br>
+**Output:**
+
+![divspan](/assets/divspan_2duze5gpx.png)
+
+<br><br><br>
+
+<span id="firstline">c. Demonstrate Types of Hyperlinks in HTML(use of anchor tag).</span>
+- **Inline Link:**
+Inline linking (also known as hotlinking, leeching, piggy-backing, direct linking, offsite image grabs) is the use of a linked object, often an image, on one site by a web page belonging to a second site. One site is said to have an inline link to the other site where the object is located.
+Inline link is a clickable hyperlink that directs the user to another page or resource on the internet, or even within the same web page.
+
+- **Absolute Link:**
+An absolute link is a hyperlink that specifies the full URL or web address of the destination page or resource. It includes the protocol, domain name, and path to the resource, such as the following example: https://www.example.com/page.html
+Absolute hyperlinks are used when linking to pages outside of the current site that have a different domain name.
+
+- **Relative Link:**
+Relative hyperlinks are addresses that are relative to the current domain or location. They only contain the name of the target page prefixed with any necessary folder moves (for example, default.html).
+
+**Output:**
+
+![abslink](/assets/abslink.png)
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<span id="firstline"> d. Design a page of small picture album. And when you click on image it should display picture in new browser window.</span>
+
+**CODE:**
+
+<div class="force-word-wrap">
+
+```
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            body{
+                background-color: grey;
+            }
+            img {
+                width: 300px;
+                height: 250px;
+                border: 2px solid blue
+            }
+            p{
+                
+                color: green;
+                font-size: 1.3rem;
+                margin-bottom: 0;
+            
+            }
+            hr{
+                line-height: 0px;
+                margin-bottom: 15px;
+                border-top: 3px solid red;
+                width: 80%
+            }
+            h1,h2{
+                color: yellow;
+            }
+            
+        </style>
+    </head>
+    <body style="font-family: sans-serif;">
+        <h1 align="center">A Simple Photo Album</h1>
+        <p align="center">Some random text that I can't read</p>
+        <hr>
+        <div class="first" align="center">
+            <a href="https://plus.unsplash.com/premium_photo-1675446084550-8b4ca9522bc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"target="_blank"><img src="https://plus.unsplash.com/premium_photo-1675446084550-8b4ca9522bc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"></a>
+```
+```
+            <a href="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"target="_blank"><img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"></a>
+            <a href="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"target="_blank"><img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"></a>
+        </div>
+        <h2 align="center">Wild Life!</h2>
+        <div class="second" align="center">
+            <a href="https://images.unsplash.com/photo-1520552159191-e28a1d9f0d7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"target="_blank"><img src="https://images.unsplash.com/photo-1520552159191-e28a1d9f0d7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"></a>
+            <a href="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"target="_blank"><img src="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"></a>
+
+        </div>
+        <h2 align="center">Butterflies</h2>
+        <div class="third" align="center">
+            <a href="https://images.unsplash.com/photo-1549480017-d76466a4b7e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"target="_blank"><img src="https://images.unsplash.com/photo-1549480017-d76466a4b7e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"></a>
+            <a href="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"target="_blank"><img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d2lsZGxpZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"></a>
+            <a href="https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdpbGRsaWZlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"target="_blank"><img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdpbGRsaWZlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"></a>
+        </div>
+    </body>
+</html>
+
+```
+<br>
+</div>
+
+
+**Output:**
+
+![wildlifeAlbum](/assets/wildlifeAlbum.png)
+
+<br><br>
+<style>
+    *{
+        
+        font-size:14px;
+    }
+    html body code{
+        font: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;
+        font-size: 14px !important;
+        background: inherit !important
+    }
+
+    html body pre code, html body pre tt {
+        font-family: jetbrains mono !important;
+        font-size: 14px !important;
+        background: inherit !important
+    }
+
+    body{
+        color: #000 !important
+    }
+
+    li>code:first-child{
+        font-size: 14px !important;
+        font-weight: bolder;
+    }
+    
+    html body code{
+        font-size: 14px !important;
+    }
+
+    code{
+        font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif !important;
+    }
+
+    #firstline{
+        font-size: 16px !important;
+        font-weight: bolder;
+        color: #000;
+    }
+
+    
+</style>
+<h2 id ="header_" align="center">Practical 3</h2>
+<span id="firstline">a. Design tables given below:</span>
+<br><br>
+
+1. **Code:**
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            table{
+                margin: auto;
+                margin-top: 5%;
+                width: 65%;
+                border-collapse: collapse;
+            }
+            td{
+                height: 40px;
+                padding: 1px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1px">
+            <tr>
+                <td rowspan="2">Train Name</td>
+                <td colspan= "2">Time</td>
+                <td rowspan="2">Source</td>
+                <td rowspan="2">Destination</td>
+            </tr>
+            <tr>
+                <td>Arrival</td>
+                <td>Departure</td>
+            </tr>
+            <tr>
+                <td>Udyan Express</td>
+                <td>7:50 pm</td>
+                <td>8:30 pm</td>
+                <td>Banglore</td>
+                <td>Mumbai</td>
+            </tr>
+```
+```
+            <tr>
+                <td>Baroda Express</td>
+                <td>11:30 pm</td>
+                <td>11:35 pm</td>
+                <td>Mumbai</td>
+                <td>Vadodara</td>
+            </tr>
+            <tr>
+                <td>Karnavati Express</td>
+                <td>7:00 am</td>
+                <td>7:10 am</td>
+                <td>Vadodara</td>
+                <td>Surat</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+```
+
+**Output:**
+![traintable](/assets/traintable_f45znkx8o.png)
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+2.<br>
+
+**Code:**
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+
+        }
+        table{
+            margin: auto;
+            margin-top: 20vh;
+            text-align: left;
+            width: 600px;
+            height: 300px;
+            border-collapse: collapse;
+        }
+        td{
+            vertical-align: top;
+            border: 2px solid blue;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        
+        <tr>
+            <td rowspan="3">A</td>
+            <td colspan="6">B</td>
+
+        </tr>
+        
+        <tr>
+            <td colspan="2">E</td>
+            <td colspan="1">F &nbsp; &nbsp;</td>
+            <td rowspan="2">C</td>
+            <td>&nbsp;&nbsp;</td>
+        </tr>
+```
+```       
+        <tr>
+            <td colspan="3">D</td>
+            <td>&nbsp;&nbsp;</td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+
+**Output:**
+
+![2ndtable](/assets/2ndtable.png)
+
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<span id="firstline">b. Create a web page dividing it using frame as shown in following Figure.</span>
+1.<br>
+
+**CODE:**
+
+```
+<!DOCTYPE html>
+<html>    
+    <head>
+        <title>frameset attribute</title>
+        <style>
+            frameset{
+                vertical-align: top;
+            }
+        </style>
+    </head>
+         
+    <frameset cols = "20%, 30%, 30%, 20%">
+         <frameset rows="100 , 200, 130">
+            <frame/>
+            <frame />
+            <frame />
+         </frameset>
+         <frameset rows="170 , 130">
+            <frame />
+            <frame />
+         </frameset>
+         <frameset rows="130 , 170">
+            <frame />
+            <frame />
+         </frameset>
+         <frameset rows="100, 150 , 60">
+            <frame />
+            <frame />
+            <frame />
+         </frameset>
+    </frameset>
+</html>
+```
+
+**Output:**
+
+![framesfor1](/assets/framesfor1_xzupvmsps.png)
+
+<br><br>
+
+2.<br>
+**CODE:**
+
+```
+<!DOCTYPE html>
+<html>    
+    <head>
+        <title>frameset attribute</title>
+        <style>
+            frameset{
+                vertical-align: top;
+            }
+        </style>
+    </head>
+    <frameset rows="12%, 76%, 12%">
+    <frameset cols = "100%">
+        <frame/>
+    </frameset>
+    <frameset cols = "10%, 90%">
+        <frame/>
+        <frame/>
+    </frameset>
+    <frameset cols = "100%">
+         <frame/>
+    </frameset>
+</frameset>
+</html>
+```
+
+**Output:**
+
+
+![2ndlayoutframse](/assets/2ndlayoutframse.png)
+
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<span id="firstline">c. Create one form with following fields</span>
+
+**CODE:**
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: burlywood;
+            font-family: sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+        }
+        select{
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="Name">Name:</label>
+        <input type="text">
+        <br>
+        <label for="Password">Password:</label>
+        <input type="password">
+        <br>
+        <label for="Address">Address:</label><br>
+        <textarea name="Address" cols="40" rows="8" >Enter addresss here</textarea>
+        <br>
+        <label for="PhoneNo">Phone no.:</label>
+        <input type="tel">
+        <br>
+        <label for="Email Address">Email:</label>
+        <input type="email">
+        <br>
+        <label for="Gender">Gender:</label>
+        
+        <input type="radio" name="Gender">
+        <label for="Male">Male</label>
+```
+```
+        <input type="radio"name="Gender">
+        <label for="Female">Female</label>
+
+        <br>
+        <label for="Hobbies">Hobbies:</label>
+        <input type="checkbox" name="Hobbies">
+        <label for="Hobbies">Cricket</label>
+        <input type="checkbox" name="Hobbies">
+        <label for="Hobbies">Videogames</label>
+        <input type="checkbox" name="Hobbies">
+        <label for="Hobbies">Singing</label>
+        <input type="checkbox" name="Hobbies">
+        <label for="Hobbies">Reading</label>
+        <br>
+        <label for="Country">Country:</label>
+        <select name="Country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="China">China</option>
+            <option value="Russia">Russia</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="UK">UK</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Norway">Norway</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Bhutan">Bhutan</option>
+
+        </select>
+        <br>
+
+        <input type="submit" value="SUBMIT">
+        <input type="reset" value="RESET">
+
+    </form>
+</body>
+</html>
+```
+
+**Output:**
+
+![registratioonformt](/assets/registratioonformt.png)
