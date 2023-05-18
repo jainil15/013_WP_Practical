@@ -8,11 +8,11 @@
 </head>
 <body>
     <form action="1.php" method="post">
-        <input type="text" name="name" id="name"><br><br>
-        <input type="text" name="surname"><br><br>
-        <input type="email" name="email" id="email"><br><br>
-        <input type="tel" name="phone" id="phone"><br><br>
-        <input type="text" name="city" id="city"><br><br>
+        Name: <input type="text" name="name" id="name"><br><br>
+        Surname: <input type="text" name="surname"><br><br>
+        Email: <input type="email" name="email" id="email"><br><br>
+        Phone: <input type="tel" name="phone" id="phone"><br><br>
+        City: <input type="text" name="city" id="city"><br><br>
         <input type="submit" value="Ok">
         <input type="reset" value="Cancel">
     </form>
