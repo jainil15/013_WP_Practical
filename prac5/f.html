@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="green">GREEN</button><br>
+    <button id="blue">BLUE</button><br>
+    <button id="red">RED</button><br>
+    <script>
+        let green = document.getElementById("green")
+        let red= document.getElementById("red")
+        let blue = document.getElementById("blue")
+
+        green.onclick = () => {
+            document.body.style.backgroundColor = "green"
+        }
+        red.onclick = () => {
+            document.body.style.backgroundColor = "red"
+        }
+        blue.onclick = () => {
+            document.body.style.backgroundColor = "blue"
+        }
+    </script>
+</body>
+</html>

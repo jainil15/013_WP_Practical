@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">Hide and show this text</p>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <script>
+        let p1 = document.getElementById("p")
+        let hide = document.getElementById("hide")
+        let show = document.getElementById("show")
+
+        show.onclick = () => {
+            p1.style.display = "block"
+        }
+
+        hide.onclick = () => {
+            p1.style.display = "none"
+        }
+
+        
+    </script>
+</body>
+</html>

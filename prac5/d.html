@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    input{
+        height: 2rem;
+        width: 20rem;
+    }
+</style>
+<body>
+    <input type="text" name="numbers" id="numbers">
+    <div id="even"></div>
+    <div id="odd"></div>
+    <script>
+        let numbers = document.getElementById("numbers")
+        let btn = document.getElementById("btn")
+        let even_div = document.getElementById("even")
+        let odd_div = document.getElementById("odd")
+        numbers.oninput = () => {
+            let n = numbers.value.split(",")
+            let even = []
+            let odd = []
+            for (const item in n) {
+                if(!isNaN(n[item]) && n[item] != "")
+                if(parseInt(n[item])%2 === 0) {
+                    even.push(n[item])
+                }
+                else{
+                    odd.push(n[item])
+                }
+            }
+            even_div.innerHTML="Even nos. = " + even
+            odd_div.innerHTML = "Odd nos. = " + odd
+            
+        }
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #main{
+            
+            margin: auto;
+            margin-top: 9vh;
+            width: 16rem;
+            display: flex;
+            flex-direction: column;
+        }
+        #main_display{
+            font-size: 1.7rem;
+            border: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            
+            padding: 5px;
+            background: rgb(235, 225, 225, 0.5);
+            overflow: hidden;
+            height: 4rem;
+            margin: 0;
+        }
+        #upper_display{
+            height: 2rem;
+            font-size: 1.2rem;
+            text-align: right;
+        }
+        #display{
+            height: 3rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+        }
+        
+        button{
+            height: 4rem;
+            border-radius: 0;
+            border-style: none;
+            margin: 0;
+            border: 1px solid gray;
+
+        }
+        #container{
+            display:grid;
+            grid-template-columns: 4rem 4rem 4rem 4rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+    <div id="main_display">
+        <div id="upper_display"></div>
+        <div id="display"></div>
+    </div>
+    <br>
+    <div id="container">
+        <button class="digit">1</button>
+        <button class="digit">2</button>
+        <button class="digit">3</button>
+        <button id="add" class="oper">+</button>
+        <button class="digit">4</button>
+        <button class="digit">5</button>
+        <button class="digit">6</button>
+        <button id="sub" class="oper">-</button>
+        <button class="digit">7</button>
+        <button class="digit">8</button>
+        <button class="digit">9</button>
+        <button id="mult" class="oper">*</button>
+        
+        <button class="digit">.</button>
+        <button class="digit">0</button>
+        <button id="equals">=</button>
+    
+    
+    
+    <button id="div" class="oper">/</button>
+    
+    <button id="reset">C</button>
+    </div> 
+</div> 
+    
+
+    <script>
+        let display=document.getElementById("display")
+        let op = document.getElementsByClassName("oper")
+        let equals = document.getElementById("equals")
+        let reset = document.getElementById("reset")
+        let digits = document.getElementsByClassName("digit")
+        let displayText = ""
+        let first
+        let udisp = document.getElementById("upper_display")
+        let operation = ""
+        display.innerHTML = "0"
+        let isRes = true
+
+        for (const item in op) {
+            op[item].onclick = (e) => {
+                operation = op[item].innerHTML
+                if(displayText != "") {
+                    first = parseFloat(displayText)
+                }
+
+                displayText = ""
+                display.innerHTML = displayText
+                udisp.innerHTML = first + " " + operation
+            }
+            
+        }
+        
+        for (const item in digits) {
+            digits[item].onclick = () => {
+                if(isRes) {
+                    displayText = ""
+                    isRes = false
+                }
+                displayText += digits[item].innerHTML
+                display.innerHTML = displayText
+            }
+        }
+
+        equals.onclick = () => {
+            displayText =doOperation(first, operation, parseFloat(displayText))
+            display.innerHTML = displayText
+            udisp.innerHTML = ""
+            isRes = true
+        }
+        
+        document.onkeypress = (e) => {12
+            if (!isNaN(e.key) ) {
+                if(isRes) {
+                    displayText = ""
+                    isRes = false
+                }
+                displayText += e.key
+            }
+            else if (specialChar(e.key)) {
+                if(displayText != "") {
+                    first = parseFloat(displayText)
+                    
+                }
+                operation = e.key
+                displayText = ""
+                udisp.innerHTML = first+" "+operation
+            }
+            else if (e.key == "=" || e.keyCode == 13) {
+                displayText =doOperation(first, operation, parseFloat(displayText))
+                udisp.innerHTML = ""
+                isRes = true
+
+            }
+            else if (e.key == ".") {
+                displayText += e.key
+            }
+            display.innerHTML = displayText
+        }
+
+        reset.onclick = () => {
+            operation = ""
+            first = 0;
+            displayText = ""
+            udisp.innerHTML = ""
+            display.innerHTML = displayText
+            display.innerHTML="0"
+            
+        }
+
+
+        
+
+        function specialChar(e) {
+            if(e == "+" || e == "*" || e == "-" || e == "/") {
+                return true
+            }
+            
+            return false
+        }
+
+        function doOperation(first, opcode, second) {
+            switch(opcode) {
+                case "+": return first+second
+                case "-": return first - second
+                case "*": return (first*second).toPrecision(9)
+                case "/": return (second/first).toPrecision(9)
+                default: return 
+            }
+        }
+
+        
+
+    </script>
+
+
+</body>
+</html>
